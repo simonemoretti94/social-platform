@@ -23,19 +23,34 @@
 
 <body>
     <header>
+        <div id="img">
+            <img src="./assets/img/logo.png" alt="logo">
+        </div>
         <h1 id="h1_header">social-platform</h1>
     </header>
 
     <style scoped>
         header {
-            display: grid;
+            display: flex;
             place-items: center;
             min-height: 50px;
             background: linear-gradient(180deg, rgb(0, 125, 250), rgb(34, 124, 215), rgb(41, 136, 231), rgb(34, 124, 215), rgb(0, 125, 250));
             border-bottom: solid 1px white;
 
-            >h1 {
-                text-align: center;
+            >div#img {
+                flex: 40%;
+
+                >img {
+                    flex: 40%;
+                    width: 60px;
+                    height: 50px;
+                    margin-left: 1rem;
+                }
+            }
+
+            & h1 {
+                flex: 60%;
+                text-align: left;
                 color: white;
             }
         }
