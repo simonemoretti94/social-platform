@@ -1,5 +1,7 @@
+<!-- this is a template -->
+
 <?php
-$headName = 'index';
+$headName = 'template';
 
 ?>
 
@@ -9,7 +11,9 @@ require_once __DIR__ . '/components/header.php';
 ?>
 <!-- end header -->
 <main>
-    <sup id="screen_details"></sup>
+
+    <!-- content goes here -->
+
 </main>
 
 
