@@ -57,12 +57,3 @@ main {
 .d-none {
     display: none;
 } */
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-
-    & img {
-        flex: 100%;
-    }
-}
