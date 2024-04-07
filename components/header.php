@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- assets -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <script src="./assets/js/script.js" rel="script" defer></script>
+    <?php
+    if ($headName != 'ER-graph_renderer') {
+        echo '<link rel="stylesheet" type="text/css" href="./assets/css/style.css">' .
+            '<script src="./assets/js/script.js" rel="script" defer></script>';
+    } else {
+        echo
+        '<link rel="stylesheet" type="text/css" href="../css/style.css">' .
+            '<script src="../js/script.js" rel="script" defer></script>';
+    }
+    ?>
 
     <!-- CDN tags -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +32,9 @@
 <body>
     <header>
         <div id="img">
-            <img src="/assets/img/placeholder_logo.png" alt="logo">
+            <!-- <a href="./ER-graph.php"><i id="graph_redirect" class="fa fa-cloud"></a></i> -->
+            <a href="<?= $headName == 'ER-graph_renderer' ? '../../index.php' : './assets/graph/ER-graph.php' ?>"><i id="graph_redirect" class="fa fa-cloud"></a></i>
+            <sub id="graph_text" style="<?= $headName == 'ER-graph_renderer' ? 'display: none;' : 'display: inline-block;' ?>">graph</sub>
         </div>
         <h1 id="h1_header">social-platform</h1>
     </header>
@@ -40,11 +50,22 @@
             >div#img {
                 flex: 40%;
 
-                >img {
-                    flex: 40%;
-                    width: 50px;
-                    height: 50px;
-                    margin-left: 1rem;
+                >a {
+                    >i {
+                        flex: 40%;
+                        font-size: 30px;
+                        color: white;
+                        margin-left: 1rem;
+                    }
+
+                }
+
+                & sub#graph_text {
+                    color: white;
+                    font-weight: 0;
+                    font-size: smaller;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    transform: skewX(-15deg);
                 }
             }
 
