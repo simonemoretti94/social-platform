@@ -1,0 +1,6 @@
+1. Seleziona gli utenti che hanno postato almeno un video
+
+SELECT DISTINCT `users`.`username` FROM `users` INNER JOIN `medias` ON `users`.`id` = `medias`.`user_id` WHERE `medias`.`path` LIKE '%.mp4';
+
+2. Seleziona tutti i post senza Like (13)
+
