@@ -24,7 +24,7 @@
 <body>
     <header>
         <div id="img">
-            <img src="./assets/img/logo.png" alt="logo">
+            <img src="/assets/img/placeholder_logo.png" alt="logo">
         </div>
         <h1 id="h1_header">social-platform</h1>
     </header>
@@ -42,7 +42,7 @@
 
                 >img {
                     flex: 40%;
-                    width: 60px;
+                    width: 50px;
                     height: 50px;
                     margin-left: 1rem;
                 }
