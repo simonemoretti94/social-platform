@@ -12,3 +12,11 @@ FROM `posts`
 LEFT JOIN `likes`
 ON `posts`.`id` = `likes`.`post_id`
 WHERE `likes`.`post_id` IS NULL;
+
+3. Conta il numero di like per ogni post (165)
+
+
+SELECT `posts`.`id`, COUNT(`likes`.`post_id`) AS `n_likes` 
+FROM `posts` 
+LEFT JOIN `likes` 
+ON `posts`.`id` = `likes`.`post_id` GROUP BY `posts`.`id`;
