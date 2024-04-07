@@ -20,3 +20,21 @@ SELECT `posts`.`id`, COUNT(`likes`.`post_id`) AS `n_likes`
 FROM `posts` 
 LEFT JOIN `likes` 
 ON `posts`.`id` = `likes`.`post_id` GROUP BY `posts`.`id`;
+
+ 4. Ordina gli utenti per il numero di media caricati (25) 
+
+SELECT `users`.`id`, COUNT(`medias`.`user_id`) AS `media_count` 
+FROM `users` 
+LEFT JOIN `medias` ON `users`.`id` = `medias`.`user_id`
+GROUP BY `users`.`id` 
+ORDER BY `media_count` DESC;
+
+5. Ordina gli utenti per totale di likes ricevuti nei loro posts (25) 
+
+SELECT `users`.`id`, COUNT(`likes`.`post_id`) AS `tot_likes`
+FROM `users` JOIN `posts` ON `users`.`id` = `posts`.`user_id`
+JOIN `likes` ON `posts`.`id` = `likes`.`post_id`
+GROUP BY `users`.`id`
+ORDER BY `tot_likes` DESC;
+
+
