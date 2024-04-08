@@ -1,5 +1,5 @@
 <style scoped>
-    div[id^="user-sidebar"] {
+    div[id^="user-sidebar-"] {
         width: 90%;
         display: flex;
         flex-direction: row;

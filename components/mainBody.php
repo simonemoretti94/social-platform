@@ -2,7 +2,7 @@
     div#col {
         padding: 1rem;
 
-        >div[id^="user-mainbody"] {
+        >div[id^="user-mainbody-"] {
             /* positioning items */
             display: flex;
             flex-direction: column;
@@ -44,7 +44,7 @@
 
         }
 
-        >div#user-mainbody:hover {
+        >div[id^="user-mainbody-"]:hover {
             background-color: var(--blue-light);
             filter: drop-shadow(0 0 5px var(--violet-dark));
 
