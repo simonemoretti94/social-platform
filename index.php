@@ -32,6 +32,26 @@ require_once __DIR__ . '/components/header.php';
             }
         }
     }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        /* scrollbar width */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--dark-light);
+        /* track's background color */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--violet-dark);
+        /* scrollbar's handling bg color */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        /* scrollbar's handling bg color on hover */
+    }
 </style>
 <!-- end header -->
 <main>

@@ -47,23 +47,3 @@ main {
         text-align: left;
     }
 }
-
-::-webkit-scrollbar {
-    width: 10px;
-    /* scrollbar width */
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    /* Colore di sfondo della traccia */
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-    /* Colore di sfondo della maniglia */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-    /* Colore di sfondo della maniglia al passaggio del mouse */
-}
