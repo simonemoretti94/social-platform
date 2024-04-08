@@ -1,3 +1,11 @@
+<style scoped>
+    div#user {
+        & * {
+            text-wrap: wrap;
+        }
+    }
+</style>
+
 <section id="sidebar">
     <?php
     require __DIR__ . '/../db.php';

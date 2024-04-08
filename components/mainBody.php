@@ -46,6 +46,7 @@
 
         >div#user:hover {
             background-color: var(--blue-light);
+            filter: drop-shadow(0 0 5px var(--violet-dark));
 
             & span {
                 color: var(--dark-light);
