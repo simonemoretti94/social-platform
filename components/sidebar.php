@@ -1,7 +1,6 @@
 <section id="sidebar">
     <?php
-    require_once __DIR__ . '/../db.php';
-    echo '<div id="db-result">' . var_dump($result) . '</div>';
+    require __DIR__ . '/../db.php';
 
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) : ?>
