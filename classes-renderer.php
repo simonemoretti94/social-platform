@@ -18,7 +18,11 @@ require_once __DIR__ . '/components/header.php';
 
     <?php
     var_dump($posts);
-
+    ?>
+    <hr>
+    <hr>
+    <?php
+    var_dump($medias);
     ?>
 
 </main>

@@ -36,7 +36,7 @@ class posts
 {
 
     //post::$type
-    public static $type = 'post';
+    public static $typeClass = 'post';
 
     public function __construct(public int $id, public int $user_id, public string $title, public string $date, public string $tags, public string $created_at)
     {
