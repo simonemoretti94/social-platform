@@ -2,7 +2,7 @@
     div#col {
         padding: 1rem;
 
-        >div#user {
+        >div[id^="user-mainbody"] {
             /* positioning items */
             display: flex;
             flex-direction: column;
@@ -44,7 +44,7 @@
 
         }
 
-        >div#user:hover {
+        >div#user-mainbody:hover {
             background-color: var(--blue-light);
             filter: drop-shadow(0 0 5px var(--violet-dark));
 
@@ -62,7 +62,7 @@
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) : ?>
             <div id="col" class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                <div id="user" class="container-fluid">
+                <div id="user-mainbody-<?= $row['id']; ?>" class="container-fluid">
                     <p id="username"><strong>user: </strong><span><?= $row['username']; ?></span></p>
                     <div class="wrapper">
                         <p id="user-id"><strong>id: </strong> <span><?= $row['id']; ?></span></p>

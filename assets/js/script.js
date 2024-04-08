@@ -27,3 +27,5 @@ window.addEventListener('resize', (e) => {
         //console.log('g1: ', graph1, 'g2: ', graph2, 'g3: ', graph3);
     }
 });
+
+//binding sidebar's user and maibody's user

@@ -53,7 +53,9 @@ require_once __DIR__ . '/components/header.php';
 
 
         ::-webkit-scrollbar-thumb {
-            background: var(--violet-light);
+            /* background: var(--violet-light); */
+            background: linear-gradient(90deg, #52057b, #651a8e, #7722a5, #651a8e, #52057b);
+            border: solid .1px black;
             border-radius: 2.5px;
             cursor: grabbing;
             /* scrollbar's handling bg color */
