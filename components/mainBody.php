@@ -61,7 +61,7 @@
 
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) : ?>
-            <div id="col" class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div id="col" class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <div id="user-mainbody-<?= $row['id']; ?>" class="container-fluid">
                     <p id="username"><strong>user: </strong><span><?= $row['username']; ?></span></p>
                     <div class="wrapper">
