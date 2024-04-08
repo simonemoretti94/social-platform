@@ -18,6 +18,9 @@ $headName = 'classes-renderer';
 
     .container {
         overflow-y: scroll;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         div#card {
             #card-header {
@@ -31,11 +34,23 @@ $headName = 'classes-renderer';
 
             /* & #card-body{
 
-            }
-
-            & #card-footer {
-
             } */
+
+            & div#card-footer {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                & span {
+                    padding: .5rem;
+                    margin: .5rem;
+                    border: solid 1px black;
+                    border-radius: 5px;
+
+                    text-align: center;
+                }
+            }
         }
     }
 </style>
@@ -58,7 +73,7 @@ require_once __DIR__ . '/components/header.php';
     <!-- posts -->
     <div class="container">
         <?php
-        var_dump($posts);
+        //var_dump($posts);
         ?>
 
         <?php foreach ($posts as $post) : ?>
@@ -73,8 +88,10 @@ require_once __DIR__ . '/components/header.php';
                         </p><!-- date -->
                     </div>
                     <div id="card-footer" class="card-footer">
-                        <?php foreach ($post->tags as $tag) : ?>
-                            <p><?= '<span>' . $tag . '</span>'; ?></p><!-- tags -->
+                        <?php
+                        $tags = json_decode($post->tags);
+                        foreach ($tags as $tag) : ?>
+                            <?= '<span class="col-3">' . $tag . '</span>'; ?><!-- tags -->
                         <?php endforeach; ?>
                     </div>
                 </div>
