@@ -28,7 +28,11 @@ require_once __DIR__ . '/components/header.php';
             & section#main-body {
                 flex: 75%;
                 height: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 overflow-y: scroll;
+                overflow-x: none;
             }
         }
 
