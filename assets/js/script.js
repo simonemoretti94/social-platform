@@ -29,3 +29,17 @@ window.addEventListener('resize', (e) => {
 });
 
 //binding sidebar's user and maibody's user
+const sidebarUser = document.querySelectorAll("div[id^='user-sidebar-']");
+const mainbodyUser = document.querySelectorAll("div[id^='user-mainbody-']");
+
+sidebarUser.forEach((element) => {
+    element.addEventListener('click', (clickE) => {
+        console.log(clickE.target);
+    });
+});
+
+mainbodyUser.forEach((element) => {
+    element.addEventListener('click', (clickE) => {
+        console.log(clickE.target);
+    });
+});
