@@ -11,10 +11,12 @@ require_once __DIR__ . '/components/header.php';
     main {
         min-height: calc(100vh - 100px);
         max-height: calc(100vh - 100px);
+        width: 100vw;
         overflow: hidden;
 
         >section#wrapper {
             height: calc(100vh - 120px);
+            width: 100vw;
             display: flex;
             flex-direction: row;
 
@@ -32,7 +34,7 @@ require_once __DIR__ . '/components/header.php';
                 flex-direction: row;
                 flex-wrap: wrap;
                 overflow-y: scroll;
-                overflow-x: none;
+                overflow-x: hidden;
             }
         }
 
@@ -45,11 +47,15 @@ require_once __DIR__ . '/components/header.php';
 
         ::-webkit-scrollbar-track {
             background: var(--dark-light);
+            border-left: solid .25px var(--violet-light);
             /* track's background color */
         }
 
+
         ::-webkit-scrollbar-thumb {
-            background: var(--violet-dark);
+            background: var(--violet-light);
+            border-radius: 2.5px;
+            cursor: grabbing;
             /* scrollbar's handling bg color */
         }
 
