@@ -53,7 +53,7 @@ class posts
 $posts = array();
 
 if ($result && $result->num_rows > 0) {
-    for ($i = 0; $i < 2; $i++) {
+    for ($i = 0; $i < 4; $i++) {
         $row = $result->fetch_assoc();
 
         array_push($posts, new posts($row['id'], $row['user_id'], $row['title'], $row['date'], $row['tags'], $row['created_at']));

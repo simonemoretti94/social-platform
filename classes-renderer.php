@@ -23,6 +23,8 @@ $headName = 'classes-renderer';
         flex-wrap: wrap;
 
         div#card {
+            min-height: 400px;
+
             #card-header {
                 max-height: 300px;
 
@@ -32,9 +34,26 @@ $headName = 'classes-renderer';
                 }
             }
 
-            /* & #card-body{
+            & #card-body {
+                display: grid;
+                place-items: center;
 
-            } */
+                & #card-title,
+                #card-date {
+                    text-align: center;
+                }
+
+                & #card-title {
+                    font-size: small;
+                    font-weight: 500;
+                }
+
+                & #card-date {
+                    font-size: smaller;
+                    font-weight: 300;
+                }
+
+            }
 
             & div#card-footer {
                 display: flex;
@@ -77,14 +96,14 @@ require_once __DIR__ . '/components/header.php';
         ?>
 
         <?php foreach ($posts as $post) : ?>
-            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div id="card" class="card p-1">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 p-2">
+                <div id="card" class="card">
                     <div id="card-header" class="card-header">
                         <img id="card-img" class="card-img-top" src="https://wallpapercave.com/wp/wp3250456.jpg" alt="sea_img">
                     </div>
                     <div id="card-body" class="card-body">
-                        <p class="card-text"><?= $post->title ?></p> <!-- title -->
-                        <p><?= $post->date ?></p>
+                        <p id="card-title" class="card-text"><?= $post->title ?></p> <!-- title -->
+                        <p id="card-date"><?= $post->date ?></p>
                         </p><!-- date -->
                     </div>
                     <div id="card-footer" class="card-footer">
