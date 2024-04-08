@@ -1,5 +1,4 @@
 <?php
-//remove content below after test
 
 // 1. Defyining constants
 define('DB_SERVERNAME', 'localhost');
@@ -23,15 +22,12 @@ $sql = null;
 $result = null;
 $row = null;
 
-// query: 5. Ordina gli utenti per totale di likes ricevuti nei loro posts (25);
 $sql = 'SELECT * FROM `posts`';
 $result = $connection->query($sql);
 
 
 $connection->close();
 
-
-//remove content over there after test
 class posts
 {
 
