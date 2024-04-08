@@ -72,6 +72,13 @@ $headName = 'classes-renderer';
             }
         }
     }
+
+    hr#devider {
+        border: 0;
+        height: 4px;
+        margin: 2rem auto;
+        background-image: linear-gradient(90deg, black, white, black);
+    }
 </style>
 
 <!-- importing header: contains body'open tag -->
@@ -118,8 +125,7 @@ require_once __DIR__ . '/components/header.php';
         <?php endforeach; ?>
     </div>
 
-    <hr>
-    <hr>
+    <hr id="devider">
 
     <!-- medias -->
     <div class="container">
