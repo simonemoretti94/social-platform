@@ -16,7 +16,16 @@
             flex: 20%;
             font-size: 30px;
             text-align: center;
+
+            @media screen and (max-width: 800px) {
+                font-size: 15px;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 10px;
+            }
         }
+
 
         & div#user-data {
             flex: 80%;
