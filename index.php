@@ -25,6 +25,10 @@ require_once __DIR__ . '/components/header.php';
                 height: 100%;
                 border-right: solid 2px white;
                 overflow-y: scroll;
+
+                @media screen and (max-width: 580px) {
+                    display: none;
+                }
             }
 
             & section#main-body {
@@ -35,6 +39,10 @@ require_once __DIR__ . '/components/header.php';
                 flex-wrap: wrap;
                 overflow-y: scroll;
                 overflow-x: hidden;
+
+                @media screen and (max-width: 580px) {
+                    flex: 100%;
+                }
             }
         }
 

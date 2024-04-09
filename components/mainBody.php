@@ -25,11 +25,19 @@
 
                 >strong {
                     color: var(--blue);
+
+                    @media screen and (max-width: 576px) {
+                        font-size: medium;
+                    }
                 }
 
                 & span {
                     font-style: italic;
                     font-size: medium;
+
+                    @media screen and (max-width: 576px) {
+                        font-size: x-large;
+                    }
                 }
             }
 
@@ -69,8 +77,8 @@
         while ($row = $result->fetch_assoc()) : ?>
 
             <!-- creating columns filled with values received from db's query-->
-            <div id="col" class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <div id="user-mainbody-<?= $row['id']; ?>" class="container-fluid">
+            <div id="col" class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+                <div id="user-mainbody-<?= $row['id']; ?>">
                     <p id="username"><strong>user: </strong><span><?= $row['username']; ?></span></p>
                     <div class="wrapper">
                         <p id="user-id"><strong>id: </strong> <span><?= $row['id']; ?></span></p>
