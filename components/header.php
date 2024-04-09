@@ -67,12 +67,23 @@
                     font-family: Georgia, 'Times New Roman', Times, serif;
                     transform: skewX(-15deg);
                 }
+
+                @media screen and (max-width: 450px) {
+                    display: none;
+                }
             }
+
+
 
             & h1 {
                 flex: 60%;
                 text-align: left;
                 color: white;
+
+                @media screen and (max-width: 450px) {
+                    flex: 100%;
+                    text-align: center;
+                }
             }
         }
     </style>
