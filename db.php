@@ -1,4 +1,4 @@
-<?php //THIS FILE IS EXPORTED ONLY INTO 'index.php'
+<?php //THIS FILE IS EXPORTED ONLY INTO 'sidebar.php and mainBody.php'
 
 // 1. Defyining constants
 define('DB_SERVERNAME', 'localhost');

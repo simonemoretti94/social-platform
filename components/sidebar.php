@@ -1,3 +1,4 @@
+<!-- STYLE BEGINS HERE -->
 <style scoped>
     div[id^="user-sidebar-"] {
         width: 90%;
@@ -51,16 +52,23 @@
         }
     }
 </style>
+<!-- STYLE ENDS HERE -->
 
+<!-- TEMPLATE -->
 <section id="sidebar">
     <?php
+
+    //importing db
     require __DIR__ . '/../db.php';
     ?>
     <div class="container-fluid">
         <?php
         if ($result && $result->num_rows > 0) {
+
+            //iterating into db's fetch result
             while ($row = $result->fetch_assoc()) : ?>
 
+                <!-- creating columns filled with values received from db's query-->
                 <div id="user-sidebar-<?= $row['id'] ?>">
                     <i class="fa-solid fa-user"></i>
                     <div id="user-data">

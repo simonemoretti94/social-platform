@@ -59,7 +59,7 @@ class posts
     }
 }
 
-
+// 3) CREATING n CLASSESS BASED ON DB'S FETCH RESULTS
 
 $posts = array();
 

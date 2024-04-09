@@ -58,12 +58,13 @@ class medias
     }
 }
 
+// 3) CREATING n CLASSESS BASED ON DB'S FETCH RESULTS
+
 $medias = array();
 
 if ($result && $result->num_rows > 0) {
     for ($i = 0; $i < 2; $i++) {
         $row = $result->fetch_assoc();
-        // var_dump($row);
         array_push($medias, new medias($row['id'], $row['user_id'], $row['type'], $row['path'], $row['created_at']));
     }
 } else if ($result) {
