@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- assets -->
+
+    <!-- this shows tags of different paths based into nested file's position -->
     <?php
     if ($headName != 'ER-graph_renderer') {
         echo '<link rel="stylesheet" type="text/css" href="./assets/css/style.css">' .
@@ -29,11 +31,16 @@
     <title><?php echo $headName ?></title>
 </head>
 
+<!-- body's id dynamically changed based on nested file position -->
+
 <body id="<? $headName == 'classes-renderer' ? 'posts-medias' : '' ?>">
     <header>
         <div id="img">
-            <!-- <a href="./ER-graph.php"><i id="graph_redirect" class="fa fa-cloud"></a></i> -->
+
+            <!-- this anchor tag links changes based on nested file position -->
             <a href="<?= $headName == 'ER-graph_renderer' ? '../../index.php' : './assets/graph/ER-graph.php' ?>"><i id="graph_redirect" class="fa fa-cloud"></a></i>
+
+            <!-- this sub tag appears or not based on nested file position -->
             <sub id="graph_text" style="<?= $headName == 'ER-graph_renderer' ? 'display: none;' : 'display: inline-block;' ?>">graph</sub>
         </div>
         <h1 id="h1_header">social-platform</h1>

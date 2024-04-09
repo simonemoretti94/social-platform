@@ -17,7 +17,7 @@ $headName = 'classes-renderer';
 
     div#posts-container,
     div#medias-container {
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
