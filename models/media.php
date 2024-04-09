@@ -1,4 +1,6 @@
-<?php
+<?php //THIS FILE IS EXPORTED ONLY INTO CLASSES-RENDERER.PHP
+
+// 1) QUERYING DB
 
 // 1. Defyining constants
 define('DB_SERVERNAME', 'localhost');
@@ -27,14 +29,20 @@ $result = $connection->query($sql);
 
 
 $connection->close();
+
+// 2) DEFYINING A CLASS
 class medias
 {
 
-    //media::$type
+    //media::$type declaring a static value
     public static $typeClass = 'media';
 
+
+    //creating a class's constructor
     public function __construct(public int $id, public int $user_id, public string $type, public string $path, public string $created_at)
     {
+
+        //assigning values
         $this->id = $id;
         $this->user_id = $user_id;
         $this->type = $type;
@@ -42,6 +50,8 @@ class medias
         $this->created_at = $created_at;
     }
 
+
+    //function that returns media infos
     public function mediaInfos()
     {
         return 'this media id:' . $this->id . ', was created by user: ' . $this->user_id;

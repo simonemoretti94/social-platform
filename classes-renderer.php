@@ -120,7 +120,7 @@ require_once __DIR__ . '/components/header.php';
                     </div>
                     <div id="card-footer" class="card-footer">
                         <?php
-                        $tags = json_decode($post->tags); //DECODING ENUM JSON
+                        $tags = json_decode($post->tags); //DECODING ENUM JSON AND ITERATING IN ORDER TO GET TAGS
                         foreach ($tags as $tag) : ?>
                             <?= '<span class="col-3">' . $tag . '</span>'; ?><!-- tags -->
                         <?php endforeach; ?>
@@ -137,6 +137,7 @@ require_once __DIR__ . '/components/header.php';
         <?php
         var_dump($medias);
         ?>
+        <!--ITERATING INTO POSTS ARRAY -->
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
             <div class="card p-1">
                 <div class="card-header">

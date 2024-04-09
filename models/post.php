@@ -1,4 +1,6 @@
-<?php
+<?php //THIS FILE IS EXPORTED ONLY INTO CLASSES-RENDERER.PHP
+
+// 1) QUERYING DB
 
 // 1. Defyining constants
 define('DB_SERVERNAME', 'localhost');
@@ -28,14 +30,19 @@ $result = $connection->query($sql);
 
 $connection->close();
 
+
+// 2) DEFYINING A CLASS
 class posts
 {
 
-    //post::$type
+    //post::$type declaring a static value
     public static $typeClass = 'post';
 
+    //creating a class's constructor
     public function __construct(public int $id, public int $user_id, public string $title, public string $date, public string $tags, public string $created_at)
     {
+
+        //assigning values
         $this->id = $id;
         $this->user_id = $user_id;
         $this->title = $title;
@@ -44,11 +51,15 @@ class posts
         $this->created_at = $created_at;
     }
 
+
+    //function that returns post infos
     public function postInfos()
     {
         return $this->title . ', was created at: ' . $this->created_at;
     }
 }
+
+
 
 $posts = array();
 
