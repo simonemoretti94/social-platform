@@ -35,17 +35,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const sideUser = [];
     const mainUser = [];
+    let tempval = null;
 
     sidebarUser.forEach((sidebarUser) => {
         sidebarUser.addEventListener('click', (e) => {
-            console.log('event: ', e, 'specs: ', sidebarUser);
+            console.log(e);
+            //tempval = e.target.id;
+            //tempval = e.target.id.split('-');
+            if (e.target.id.split('-').length == 3) {
+                tempval = e.target.id.split('-')[2];
+                console.log('id: ', tempval);
+            }
+            else {
+                console.log(e.target);
+            }
         });
     });
 
     mainbodyUser.forEach((mainbodyUser) => {
         mainbodyUser.addEventListener('click', (e) => {
-            console.log(sidebarUser);
-            console.log('event: ', e, 'specs: ', sidebarUser);
+            console.log(e);
+            //tempval = e.target.id;
+            //tempval = e.target.id.split('-');
+            if (e.target.id.split('-').length == 3) {
+                tempval = e.target.id.split('-')[2];
+                console.log('id: ', tempval);
+            }
+            else {
+                console.log(e.target);
+            }
+
         });
     });
 });
