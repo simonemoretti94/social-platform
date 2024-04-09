@@ -37,16 +37,30 @@
 
             >p#username {
                 text-align: start;
+
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                    font-size: smaller;
+                }
             }
 
             & div#wrapper-sidebar {
                 width: 100%;
                 display: grid;
-                grid-template-columns: 50% 50%;
+                grid-template-columns: 30% 70%;
+
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 100%
+                }
 
                 & p#user-id,
                 p#user-likes {
                     text-align: left;
+
+                    @media screen and (max-width: 768px) {
+                        text-align: center;
+                        font-size: small;
+                    }
                 }
             }
         }
@@ -74,8 +88,8 @@
                     <div id="user-data">
                         <p id="username"><?= $row['username']; ?></p>
                         <div id="wrapper-sidebar">
-                            <p id="user-id"><?= $row['id']; ?></p>
-                            <p id="user-likes"><?= $row['tot_likes']; ?></p>
+                            <p id="user-id">id: <?= $row['id']; ?></p>
+                            <p id="user-likes">likes: <?= $row['tot_likes']; ?></p>
                         </div>
                     </div>
                 </div>
