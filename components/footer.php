@@ -1,5 +1,5 @@
 <footer>
-    <p id="p-footer">All rights reserved | Simone Moretti</p>
+    <p id="p-footer"><a href="#">All rights reserved | Simone Moretti</a></p>
 </footer>
 </body>
 
@@ -14,7 +14,11 @@
         >p {
             margin-top: 1rem;
             text-align: center;
-            color: white;
+
+            >a {
+                color: white;
+                font-weight: 300;
+            }
         }
     }
 </style>

@@ -1,12 +1,11 @@
-<!-- this is a template -->
-
 <?php
 $headName = 'classes-renderer';
 
 ?>
 
+<!--STYLE BEGINS HERE-->
 <style scoped>
-    body {
+    body#posts-medias {
         overflow-y: hidden;
 
         & main {
@@ -16,7 +15,8 @@ $headName = 'classes-renderer';
         }
     }
 
-    .container {
+    div#posts-container,
+    div#medias-container {
         overflow-y: scroll;
         display: flex;
         flex-direction: row;
@@ -80,6 +80,7 @@ $headName = 'classes-renderer';
         background-image: linear-gradient(90deg, black, white, black);
     }
 </style>
+<!--STYLE ENDS HERE-->
 
 <!-- importing header: contains body'open tag -->
 <?php
@@ -87,6 +88,8 @@ require_once __DIR__ . '/components/header.php';
 ?>
 <!-- end header -->
 <main>
+
+    <!--IMPORTING FILES WHOSE CONTAINS QUERIES AND CLASSESS -->
     <?php
     require_once __DIR__ . '/models/post.php';
     require_once __DIR__ . '/models/media.php';
@@ -97,16 +100,18 @@ require_once __DIR__ . '/components/header.php';
 
 
     <!-- posts -->
-    <div class="container">
+    <div id="posts-container" class="container">
         <?php
         //var_dump($posts);
         ?>
+
+        <!--ITERATING INTO POSTS ARRAY -->
 
         <?php foreach ($posts as $post) : ?>
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 p-2">
                 <div id="card" class="card">
                     <div id="card-header" class="card-header">
-                        <img id="card-img" class="card-img-top" src="https://wallpapercave.com/wp/wp3250456.jpg" alt="sea_img">
+                        <img id="card-img" class="card-img-top" src="https://wallpapercave.com/wp/wp3250456.jpg" alt="<?= $post->title ?>">
                     </div>
                     <div id="card-body" class="card-body">
                         <p id="card-title" class="card-text"><?= $post->title ?></p> <!-- title -->
@@ -115,7 +120,7 @@ require_once __DIR__ . '/components/header.php';
                     </div>
                     <div id="card-footer" class="card-footer">
                         <?php
-                        $tags = json_decode($post->tags);
+                        $tags = json_decode($post->tags); //DECODING ENUM JSON
                         foreach ($tags as $tag) : ?>
                             <?= '<span class="col-3">' . $tag . '</span>'; ?><!-- tags -->
                         <?php endforeach; ?>
@@ -128,7 +133,7 @@ require_once __DIR__ . '/components/header.php';
     <hr id="devider">
 
     <!-- medias -->
-    <div class="container">
+    <div id="medias-container" class="container">
         <?php
         var_dump($medias);
         ?>

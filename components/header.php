@@ -29,7 +29,7 @@
     <title><?php echo $headName ?></title>
 </head>
 
-<body>
+<body id="<? $headName == 'classes-renderer' ? 'posts-medias' : '' ?>">
     <header>
         <div id="img">
             <!-- <a href="./ER-graph.php"><i id="graph_redirect" class="fa fa-cloud"></a></i> -->
