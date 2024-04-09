@@ -28,18 +28,26 @@ window.addEventListener('resize', (e) => {
     }
 });
 
-//binding sidebar's user and maibody's user
-const sidebarUser = document.querySelectorAll("div[id^='user-sidebar-']");
-const mainbodyUser = document.querySelectorAll("div[id^='user-mainbody-']");
 
-sidebarUser.forEach((element) => {
-    element.addEventListener('click', (clickE) => {
-        console.log(clickE.target);
+document.addEventListener('DOMContentLoaded', (event) => {
+    const sidebarUser = document.querySelectorAll("div[id^='user-sidebar-']");
+    const mainbodyUser = document.querySelectorAll("div[id^='user-mainbody-']");
+
+    const sideUser = [];
+    const mainUser = [];
+
+    sidebarUser.forEach((sidebarUser) => {
+        sidebarUser.addEventListener('click', (e) => {
+            console.log('event: ', e, 'specs: ', sidebarUser);
+        });
+    });
+
+    mainbodyUser.forEach((mainbodyUser) => {
+        mainbodyUser.addEventListener('click', (e) => {
+            console.log(sidebarUser);
+            console.log('event: ', e, 'specs: ', sidebarUser);
+        });
     });
 });
 
-mainbodyUser.forEach((element) => {
-    element.addEventListener('click', (clickE) => {
-        console.log(clickE.target);
-    });
-});
+
