@@ -75,6 +75,7 @@
                     transform: skewX(-15deg);
                 }
 
+                /* cloud icon desappearing */
                 @media screen and (max-width: 450px) {
                     display: none;
                 }
@@ -87,6 +88,7 @@
                 text-align: left;
                 color: white;
 
+                /* h1 tag expanding */
                 @media screen and (max-width: 450px) {
                     flex: 100%;
                     text-align: center;
