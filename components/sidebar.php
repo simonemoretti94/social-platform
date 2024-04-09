@@ -37,16 +37,16 @@
 
             >p#username {
                 text-align: start;
-
             }
 
-            &div#wrapper {
-                display: flex;
-                flex-direction: row !important;
+            & div#wrapper-sidebar {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 50%;
 
                 & p#user-id,
                 p#user-likes {
-                    width: 50%;
+                    text-align: left;
                 }
             }
         }
@@ -73,7 +73,7 @@
                     <i class="fa-solid fa-user"></i>
                     <div id="user-data">
                         <p id="username"><?= $row['username']; ?></p>
-                        <div id="wrapper">
+                        <div id="wrapper-sidebar">
                             <p id="user-id"><?= $row['id']; ?></p>
                             <p id="user-likes"><?= $row['tot_likes']; ?></p>
                         </div>
