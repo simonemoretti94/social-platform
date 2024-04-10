@@ -11,13 +11,13 @@
  */
 function elementHider(element, sidebarEl, mainbodyEl, ...debugVar) {
     console.log('id: ', debugVar);
-    splicedElement1 = document.querySelector(`div#user-sidebar-${element.target.id.split('-')[2]}`);
-    splicedElement2 = document.querySelector(`div#col-main-${element.target.id.split('-')[2]}`);
+    sidebarEl = document.querySelector(`div#user-sidebar-${element.target.id.split('-')[2]}`);
+    mainbodyEl = document.querySelector(`div#col-main-${element.target.id.split('-')[2]}`);
 
-    splicedElement1.remove();
-    splicedElement2.style = "transform: scale(1.1); color: var(--blue-dark); text-shadow: .5px .5px 0 var(--blue-light);";
+    sidebarEl.remove();
+    mainbodyEl.style = "transform: scale(1.1); color: var(--blue-dark); text-shadow: .5px .5px 0 var(--blue-light);";
     setTimeout(() => {
-        splicedElement2.remove();
+        mainbodyEl.remove();
     }, 2000);
 
     console.log('splicedelement1: ', splicedElement1, '\n\nsplicedelement2: ', splicedElement2);
@@ -88,5 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* verifying if mainbody container is empty or not */
+const mainBodyContainer = document.getElementById('mainbody-container');
+
+// mainBodyContainer.addEventListener('emptied', () => {
+//     mainBodyContainer.innerHTML = '<h1 style="text-align: center;" >No elements to display</h1>'
+// });
 
 
