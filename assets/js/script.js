@@ -29,44 +29,72 @@ window.addEventListener('resize', (e) => {
 });
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const sidebarUser = document.querySelectorAll("div[id^='user-sidebar-']");
     const mainbodyUser = document.querySelectorAll("div[id^='user-mainbody-']");
 
-    const sideUser = [];
-    const mainUser = [];
+    const sidebarUserArray = [];
+    //pushing elements into each respective's array
+    sidebarUser.forEach((element) => {
+        sidebarUserArray.push(element);
+    })
+
+    const mainbodyUserArray = [];
+    mainbodyUser.forEach((element) => {
+        mainbodyUserArray.push(element);
+    });
+
+    console.log('sidebaruser: ', sidebarUser, ' mainbodyuser: ', mainbodyUser, '\n\n sideuser array: ', sidebarUserArray, ' mainuser array: ', mainbodyUserArray);
+
     let tempval = null;
+    let splicedElement = null;
 
-    sidebarUser.forEach((sidebarUser) => {
-        sidebarUser.addEventListener('click', (e) => {
-            console.log(e);
-            //tempval = e.target.id;
-            //tempval = e.target.id.split('-');
-            if (e.target.id.split('-').length == 3) {
-                tempval = e.target.id.split('-')[2];
+    sidebarUserArray.forEach((element) => {
+        element.addEventListener('click', (element) => {
+            console.log(element.target.id);
+            if (element.target.id.split('-').length == 3) {
+                tempval = element.target.id.split('-')[2];
                 console.log('id: ', tempval);
+                splicedElement = document.getElementById(`${element.target.id}`);
+                console.log('splicedelement: ', splicedElement);
             }
             else {
-                console.log(e.target);
+                console.log(element.target);
             }
         });
     });
 
-    mainbodyUser.forEach((mainbodyUser) => {
-        mainbodyUser.addEventListener('click', (e) => {
-            console.log(e);
-            //tempval = e.target.id;
-            //tempval = e.target.id.split('-');
-            if (e.target.id.split('-').length == 3) {
-                tempval = e.target.id.split('-')[2];
-                console.log('id: ', tempval);
-            }
-            else {
-                console.log(e.target);
-            }
 
-        });
-    });
+    // sidebarUser.forEach((sidebarUser) => {
+    //     sidebarUser.addEventListener('click', (e) => {
+    //         console.log(e);
+    //         //tempval = e.target.id;
+    //         //tempval = e.target.id.split('-');
+    //         if (e.target.id.split('-').length == 3) {
+    //             tempval = e.target.id.split('-')[2];
+    //             console.log('id: ', tempval);
+    //         }
+    //         else {
+    //             console.log(e.target);
+    //         }
+    //     });
+    // });
+
+    // mainbodyUser.forEach((mainbodyUser) => {
+    //     mainbodyUser.addEventListener('click', (e) => {
+    //         console.log(e);
+    //         //tempval = e.target.id;
+    //         //tempval = e.target.id.split('-');
+    //         if (e.target.id.split('-').length == 3) {
+    //             tempval = e.target.id.split('-')[2];
+    //             console.log('id: ', tempval);
+    //         }
+    //         else {
+    //             console.log(e.target);
+    //         }
+
+    //     });
+    // });
 });
 
 

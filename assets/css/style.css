@@ -19,11 +19,6 @@ html {
     font-size: 12px;
     font-family: sans-serif;
 
-    & body {
-        width: 100vw;
-        min-width: 320px !important;
-    }
-
     & a {
         color: var(--blue-light);
         text-decoration: none;
