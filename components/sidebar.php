@@ -13,10 +13,11 @@
             text-wrap: wrap;
         }
 
-        >i {
+        >i[id^="close-icon"] {
             flex: 20%;
-            font-size: 30px;
+            font-size: 20px;
             text-align: center;
+            color: red;
 
             @media screen and (max-width: 800px) {
                 font-size: 15px;
@@ -25,6 +26,12 @@
             @media screen and (max-width: 500px) {
                 font-size: 10px;
             }
+        }
+
+        >i[id^="close-icon"]:hover {
+            font-size: 22px;
+            color: var(--blue-dark);
+            filter: drop-shadow(0 0 5px var(--violet-dark));
         }
 
 
@@ -84,7 +91,7 @@
 
                 <!-- creating columns filled with values received from db's query-->
                 <div id="user-sidebar-<?= $row['id'] ?>">
-                    <i class="fa-solid fa-x"></i>
+                    <i id="close-icon-<?= $row['id'] ?>" class="fa-solid fa-x"></i>
                     <div id="user-data">
                         <p id="username"><?= $row['username']; ?></p>
                         <div id="wrapper-sidebar">
