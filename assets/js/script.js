@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainbodyUserArray.push(element);
     });
 
-    console.log('sidebaruser: ', sidebarUser, ' mainbodyuser: ', mainbodyUser, '\n\n sideuser array: ', sidebarUserArray, ' mainuser array: ', mainbodyUserArray);
+    //console.log('sidebaruser: ', sidebarUser, ' mainbodyuser: ', mainbodyUser, '\n\n sideuser array: ', sidebarUserArray, ' mainuser array: ', mainbodyUserArray);
 
     let tempval = null;
     let splicedElement1 = null;
@@ -58,8 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('id: ', tempval);
                 splicedElement1 = document.querySelector(`div#user-sidebar-${element.target.id.split('-')[2]}`);
                 splicedElement2 = document.querySelector(`div#user-mainbody-${element.target.id.split('-')[2]}`);
-                console.log('splicedelement1: ', splicedElement1, 'splicedelement2: ', splicedElement2);
                 splicedElement1.style.display = 'none';
+                splicedElement2.style.display = 'none';
+                console.log('splicedelement1: ', splicedElement1, 'splicedelement2: ', splicedElement2);
             }
             else {
                 console.log(element.target);
