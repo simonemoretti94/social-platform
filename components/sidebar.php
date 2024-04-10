@@ -84,7 +84,7 @@
 
                 <!-- creating columns filled with values received from db's query-->
                 <div id="user-sidebar-<?= $row['id'] ?>">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-x"></i>
                     <div id="user-data">
                         <p id="username"><?= $row['username']; ?></p>
                         <div id="wrapper-sidebar">
