@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('sidebaruser: ', sidebarUser, ' mainbodyuser: ', mainbodyUser, '\n\n sideuser array: ', sidebarUserArray, ' mainuser array: ', mainbodyUserArray);
 
     let tempval = null;
-    let splicedElement = null;
+    let splicedElement1 = null;
+    let splicedElement2 = null;
 
     sidebarUserArray.forEach((element) => {
         element.addEventListener('click', (element) => {
@@ -55,8 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (element.target.id.split('-').length == 3) {
                 tempval = element.target.id.split('-')[2];
                 console.log('id: ', tempval);
-                splicedElement = document.getElementById(`${element.target.id}`);
-                console.log('splicedelement: ', splicedElement);
+                splicedElement1 = document.querySelector(`div#user-sidebar-${element.target.id.split('-')[2]}`);
+                splicedElement2 = document.querySelector(`div#user-mainbody-${element.target.id.split('-')[2]}`);
+                console.log('splicedelement1: ', splicedElement1, 'splicedelement2: ', splicedElement2);
+                splicedElement1.style.display = 'none';
             }
             else {
                 console.log(element.target);
