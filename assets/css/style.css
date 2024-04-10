@@ -49,3 +49,14 @@ main {
         text-align: left;
     }
 }
+
+/* utility classes */
+
+/* js hide function */
+/* .scaling {
+    background-color: var(--blue-light) !important;
+
+    & * {
+        color: var(--violet-mid-dark) !important;
+    }
+} */

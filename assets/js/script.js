@@ -12,9 +12,14 @@
 function elementHider(element, sidebarEl, mainbodyEl, ...debugVar) {
     console.log('id: ', debugVar);
     splicedElement1 = document.querySelector(`div#user-sidebar-${element.target.id.split('-')[2]}`);
-    splicedElement2 = document.querySelector(`div#user-mainbody-${element.target.id.split('-')[2]}`);
-    splicedElement1.style.display = 'none';
-    splicedElement2.style.display = 'none';
+    splicedElement2 = document.querySelector(`div#col-main-${element.target.id.split('-')[2]}`);
+
+    splicedElement1.remove();
+    splicedElement2.style = "transform: scale(1.1); color: var(--blue-dark); text-shadow: .5px .5px 0 var(--blue-light);";
+    setTimeout(() => {
+        splicedElement2.remove();
+    }, 2000);
+
     console.log('splicedelement1: ', splicedElement1, '\n\nsplicedelement2: ', splicedElement2);
     console.log('success!');
 }
