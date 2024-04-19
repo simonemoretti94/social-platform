@@ -61,13 +61,26 @@ $headName = 'classes-renderer';
                 flex-wrap: wrap;
                 justify-content: space-evenly;
 
-                & span {
+                & span#tag {
+                    background: linear-gradient(180deg, black, white, white, white, white, white, black);
+
+                    text-wrap: nowrap;
+                    font-family: 'Times New Roman', Times, serif;
+                    letter-spacing: 1px;
+                    font-weight: 200;
+
+                    cursor: pointer;
                     padding: .5rem;
                     margin: .5rem;
                     border: solid 1px black;
                     border-radius: 5px;
 
                     text-align: center;
+                }
+
+                & span#tag:hover {
+                    background: linear-gradient(90deg, var(--blue-light), var(--blue-dark), var(--blue-light));
+                    color: white;
                 }
             }
         }
@@ -122,7 +135,7 @@ require_once __DIR__ . '/components/header.php';
                         <?php
                         $tags = json_decode($post->tags); //DECODING ENUM JSON AND ITERATING IN ORDER TO GET TAGS
                         foreach ($tags as $tag) : ?>
-                            <?= '<span class="col-3">' . $tag . '</span>'; ?><!-- tags -->
+                            <?= '<span id="tag" class="col-3">' . $tag . '</span>'; ?><!-- tags -->
                         <?php endforeach; ?>
                     </div>
                 </div>
@@ -130,29 +143,27 @@ require_once __DIR__ . '/components/header.php';
         <?php endforeach; ?>
     </div>
 
-    <hr id="devider">
+    <!-- <hr id="devider"> -->
 
     <!-- medias -->
-    <div id="medias-container" class="container">
-        <?php
-        var_dump($medias);
-        ?>
-        <!--ITERATING INTO POSTS ARRAY -->
+    <!-- <div id="medias-container" class="container">
+   
+        
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
             <div class="card p-1">
                 <div class="card-header">
                     <img class="card-img-top" src="" alt="sea_img">
                 </div>
                 <div class="card-body">
-                    <p class="card-text"></p> <!-- title -->
-                    <p></p><!-- date -->
+                    <p class="card-text"></p> 
+                    <p></p>
                 </div>
                 <div class="card-footer">
-                    <p><span></span></p><!-- tags -->
+                    <p><span></span></p>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </main>
 
