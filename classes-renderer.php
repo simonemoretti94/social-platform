@@ -89,6 +89,16 @@ $headName = 'classes-renderer';
                     border-radius: 5px;
 
                     text-align: center;
+
+                    @media screen and (max-width: 450px) {
+                        font-size: 10px;
+                        font-weight: 400;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        font-size: 8px;
+                        font-weight: 600;
+                    }
                 }
 
                 & span#tag:hover {
