@@ -2,7 +2,6 @@
 
 <?php
 $headName = 'ER-graph_renderer';
-
 ?>
 
 <!-- importing header: contains body'open tag -->
@@ -10,51 +9,8 @@ $headName = 'ER-graph_renderer';
 require_once __DIR__ . '/../../components/header.php';
 ?>
 
-<!-- STYLE BEGINS HERE -->
-<style>
-    main {
-        display: grid;
-        place-content: center;
-        overflow-y: scroll;
-
-        >sup {
-            cursor: pointer;
-        }
-
-        & img#graph-1 {
-            width: calc(100vw - 40px);
-            height: calc(100vh - 120px);
-            background-color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            filter: drop-shadow(1px 1.5px 5px #9614dc98);
-        }
-    }
-
-    #graph-2 img,
-    #graph-3 img {
-        max-width: 100%;
-    }
-
-    .flex-column {
-        display: flex;
-        flex-direction: column;
-
-        & img {
-            flex: 100%;
-            padding: 1rem;
-        }
-    }
-
-    #hr-divider {
-        margin: .5rem auto;
-        border: solid 2px black;
-    }
-</style>
-<!-- STYLE ENDS HERE -->
-
 <!-- end header -->
-<main>
+<main id="er-graph">
     <!-- BEHAVIOUR DETERMINED INTO EXTERNAL JS FILE -->
 
     <sup id="screen_details" style="margin: '.5rem auto .2rem auto;"></sup>
