@@ -31,7 +31,19 @@ $headName = 'classes-renderer';
                 >img#card-img {
                     max-width: 100%;
                     max-height: 100%;
+
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
                 }
+
+                >img#card-img:hover {
+                    transform: scale(.95);
+                    border-radius: 10px;
+                }
+            }
+
+            #card-header:hover {
+                filter: drop-shadow(0 0 6px var(--blue-dark));
             }
 
             & #card-body {
@@ -56,6 +68,7 @@ $headName = 'classes-renderer';
             }
 
             & div#card-footer {
+                background-color: #575a5f7f;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
