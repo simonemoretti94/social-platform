@@ -1,5 +1,5 @@
 <footer>
-    <p id="p-footer"><a href="#">All rights reserved | Simone Moretti</a></p>
+    <p id="p-footer"><a href="<?= $headName == 'ER-graph_renderer' ? '../../index.php' : './index.php' ?>">All rights reserved | Simone Moretti</a></p>
 </footer>
 </body>
 
