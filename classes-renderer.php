@@ -23,7 +23,7 @@ require_once __DIR__ . '/components/header.php';
         ?>
 
         <!--ITERATING INTO POSTS ARRAY -->
-
+    <div class="row">
         <?php foreach ($posts as $post) : ?>
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 p-2">
                 <div id="card" class="card">
@@ -45,6 +45,7 @@ require_once __DIR__ . '/components/header.php';
                 </div>
             </div>
         <?php endforeach; ?>
+    </div>
     </div>
 
     <!-- <hr id="devider"> -->
