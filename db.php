@@ -7,7 +7,7 @@ define('DB_PASSWORD', 'root');
 define('DB_NAME', 'social-platform');
 
 // 2. Defyining a new connection's instance
-$connection = null;
+//$connection = null;
 $connection = new mysqli(DB_SERVERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
 //var_dump($connection);
 

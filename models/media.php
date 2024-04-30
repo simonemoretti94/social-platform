@@ -31,7 +31,7 @@ $result = $connection->query($sql);
 $connection->close();
 
 // 2) DEFYINING A CLASS
-class medias
+class media
 {
 
     //media::$type declaring a static value
@@ -65,7 +65,7 @@ $medias = array();
 if ($result && $result->num_rows > 0) {
     for ($i = 0; $i < 2; $i++) {
         $row = $result->fetch_assoc();
-        array_push($medias, new medias($row['id'], $row['user_id'], $row['type'], $row['path'], $row['created_at']));
+        array_push($medias, new media($row['id'], $row['user_id'], $row['type'], $row['path'], $row['created_at']));
     }
 } else if ($result) {
     echo '0 results';

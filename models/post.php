@@ -32,7 +32,7 @@ $connection->close();
 
 
 // 2) DEFYINING A CLASS
-class posts
+class post
 {
 
     //post::$type declaring a static value
@@ -67,7 +67,7 @@ if ($result && $result->num_rows > 0) {
     for ($i = 0; $i < 6; $i++) {
         $row = $result->fetch_assoc();
 
-        array_push($posts, new posts($row['id'], $row['user_id'], $row['title'], $row['date'], $row['tags'], $row['created_at']));
+        array_push($posts, new post($row['id'], $row['user_id'], $row['title'], $row['date'], $row['tags'], $row['created_at']));
     }
     // while ($row = $result->fetch_assoc()) {
     //     //var_dump($row);
